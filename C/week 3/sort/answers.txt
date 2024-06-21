@@ -1,0 +1,15 @@
+sort1 uses: Bubble sort
+
+How do you know?: after repeating the algorithm a few time , I observed that big O is way greater-than omega,
+                  example O = 0m6.040s and omaga = 0m0.732s
+
+sort2 uses: Merge sort
+
+How do you know?: after repeating the algorithm a few time , I observed that big O = omega,
+                  and big O was way lower in comparison to hte other sort,
+                  example O = 0m0.848s and omaga = 0m0.877s
+
+sort3 uses: Selection sort
+
+How do you know?: after repeating the algorithm a few time , I observed that big O = omega, but less then sort 2,
+                  example O = 0m2.782s omaga = 0m3.144s
