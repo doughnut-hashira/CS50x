@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener("DOMContentLoaded" , function()
+            {
+
+                let incorrects = document.querySelectorAll(".incorrect");
+
+                incorrects.forEach(button => {
+                    button.addEventListener('click', function () {
+                        button.style.backgroundColor = 'red';
+                        document.querySelector('.verify-1').textContent = "Incorrect";
+                    });
+                });
+
+                let corrects = document.querySelectorAll('.correct');
+
+                corrects.forEach(button => {
+                    button.addEventListener('click', function () {
+                        button.style.backgroundColor = 'green';
+                        document.querySelector('.verify-1').textContent = "Correct";
+                    });
+                });
+
+                document.querySelector('.Free-Responce').addEventListener('click', function(event) {
+                    let ans = document.querySelector('#ANS').value.trim().toLowerCase();
+                    if (ans.includes("cs50x"))
+                    {
+                        document.querySelector('.verify-2').textContent = 'correct';
+                    }
+                    else
+                    {
+                        document.querySelector('.verify-2').textContent = 'incorrect';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3 >Name the capital of INDIA</h3>
+                <button class= "incorrect" >Kolkata</button>
+                <button class= "incorrect" >Hyderabad</button>
+                <button class= "incorrect" >Mumbai</button>
+                <button class= "correct" >Delhi</button>
+                <button class= "incorrect" >Goa</button>
+                <p class = "verify-1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <form onsubmit="return false;">
+                    <h3>What is the name of this course</h3>
+                    <input autocomplete="off" id="ANS" placeholder="Name" type="text">
+                    <button class="Free-Responce">Check Answer</button>
+                    <p class = "verify-2"></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

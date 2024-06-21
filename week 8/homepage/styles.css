@@ -1,0 +1,44 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #AC94F4;
+    font-family: "Roboto", sans-serif;
+    colour: #0000;
+    font-size : 3rem;
+}
+
+.profile_pic {
+    margin-left: -13rem;
+    position: relative;
+    left: -29px;
+}
+
+.profile_pic img {
+    height: 450px;
+    width: 700px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.about_me {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-weight: 300;
+}
+
+.about_me_contents {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0rem;
+    color: #ddd;
+}
+
+.about_me_contents span {
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding-top: 5px;
+    color: #5a61f2;
+}
